@@ -64,5 +64,26 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Shadowfax AI is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.hiive.com/securities/shadowfax-stock
+Shadowfax AI is an AI-native, agentic analytics platform founded in 2025 and based in Menlo Park,
+California. It combines a spreadsheet, a BI tool, a visual pipeline and a code notebook into one
+analyst-in-the-loop workflow: uploaded CSV, TSV, Excel and Parquet files are held immutable as
+Sources, and every transformation produces a new View with full lineage, inspectable SQL and an
+auditable node graph. The product is in free public beta.
+
+**Shadowfax AI publishes no public developer API.** There is no developer portal, API reference,
+OpenAPI or other machine-readable contract, SDK, CLI, webhook surface or MCP server. The only HTTP
+contract on any host is an `/openapi.json` route on the application backend, which requires a
+Clerk-issued session JWT and is not published. See `x-coverage` in `apis.yml`.
+
+- https://shadowfax.ai/
+- https://docs.shadowfax.ai/
+- https://trust.shadowfax.ai/
+- https://status.shadowfax.ai/
+
+### Name collision
+
+This profile covers **Shadowfax AI** (shadowfax.ai, Menlo Park, agentic analytics, founded 2025).
+It is **not** Shadowfax Technologies Ltd (shadowfax.in, Bengaluru third-party logistics, founded
+2015, listed on the NSE as SADO). The harvest backlog seeded this slug with a Hiive secondary-market
+URL belonging to the logistics company; that pointer has been removed. See `x-provenance-note` in
+`apis.yml`.

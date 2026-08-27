@@ -1,17 +1,37 @@
 aid: shadowfax
 name: Shadowfax AI
-description: 'Shadowfax AI is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Shadowfax AI is an AI-native, agentic analytics platform founded in 2025 and based in Menlo
+  Park, California, built by veterans of Snowflake, Palantir, Rubrik and Alteryx and backed by Khosla
+  Ventures and the Snowflake Startup Accelerator. The product combines a spreadsheet, a BI tool, a visual
+  pipeline and a code notebook into one analyst-in-the-loop workflow: users upload CSV, TSV, Excel or
+  Parquet sources, which are held immutable, and every transformation produces a new View with full lineage,
+  inspectable SQL and an auditable node graph. Features include AI Tables, an AI chat interface, schema
+  discovery, slash commands, a reactive dependency system, manual SQL mode and a Vega-based visualization
+  framework. It is in free public beta; live database connections to Snowflake and BigQuery are announced
+  as coming soon. Shadowfax AI publishes no public developer API — the platform is an end-user product
+  and its only HTTP contract sits behind a Clerk-authenticated session on app.shadowfax.ai.'
 url: https://raw.githubusercontent.com/api-evangelist/shadowfax/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-provenance-note: 'IDENTITY COLLISION IN THE HARVEST SEED. The backlog entry for this slug carried the
+  name "Shadowfax AI" but the URL https://www.hiive.com/securities/shadowfax-stock, which is a different
+  company: Shadowfax Technologies Ltd, a Bengaluru third-party logistics operator founded 2015, now publicly
+  listed on the NSE as SADO. This repo profiles Shadowfax AI (shadowfax.ai, Menlo Park, agentic analytics),
+  matching the recorded company name. The Hiive venue listing has been removed as the Website pointer;
+  the logistics company, if wanted, belongs under a separate slug.'
 specificationVersion: '0.20'
 created: '2026-08-27'
 modified: '2026-08-27'
+image: https://docs.shadowfax.ai/img/shadowfax-social-card.png
 tags:
 - Company
+- Analytics
+- Business Intelligence
+- Artificial Intelligence
+- Data
+- Agentic Analytics
+- Data Engineering
+- SaaS
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +40,59 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.hiive.com/securities/shadowfax-stock
+  url: https://shadowfax.ai/
+- type: Documentation
+  url: https://docs.shadowfax.ai/
+- type: GettingStarted
+  url: https://docs.shadowfax.ai/docs/introduction/getting-started
+- type: Blog
+  url: https://shadowfax.ai/blog
+- type: Pricing
+  url: https://shadowfax.ai/pricing
+- type: SignUp
+  url: https://shadowfax.ai/sign-up
+- type: TermsOfService
+  url: https://shadowfax.ai/terms
+- type: PrivacyPolicy
+  url: https://shadowfax.ai/privacy
+- type: StatusPage
+  url: https://status.shadowfax.ai/
+- type: TrustCenter
+  url: security/shadowfax-trust-center.yml
+- type: DomainSecurity
+  url: security/shadowfax-domain-security.yml
+- type: Plans
+  url: plans/shadowfax-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/shadowfax-rate-limits.yml
+- type: Conformance
+  url: conformance/shadowfax-conformance.yml
+- type: Compliance
+  url: conformance/shadowfax-conformance.yml
+- type: LLMsTxt
+  url: llms/shadowfax-llms.txt
+x-enrichment:
+  date: '2026-08-27'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: 'Shadowfax AI ships its agentic-analytics platform only as an end-user web application: the
+    35-page Docusaurus documentation site has no API reference section, the pricing tiers name no API
+    allowance, github.com/shadowfax-ai has zero public repositories, and the only HTTP contract on any
+    host is the SPA backend route app.shadowfax.ai/openapi.json, which is not a product API and answers
+    unauthenticated callers with a Clerk session-token 401.'
+  evidence:
+  - url: https://app.shadowfax.ai/openapi.json
+    status: 401
+  - url: https://docs.shadowfax.ai/sitemap.xml
+    status: 200
+  - url: https://shadowfax.ai/api
+    status: 404
+  - url: https://shadowfax.ai/llms.txt
+    status: 404
+  - url: https://shadowfax.ai/.well-known/agent-card.json
+    status: 404
+  checked: '2026-08-27'

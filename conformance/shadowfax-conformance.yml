@@ -1,0 +1,87 @@
+generated: '2026-08-27'
+method: searched
+source: https://trust.shadowfax.ai/
+note: >-
+  Assessed against the provider's own published surface. Shadowfax AI ships no
+  machine-readable contract, so every entry below is grounded in a docs or trust
+  page rather than in a spec. The API/protocol standards are recorded as
+  conforms:false NOT AS A PENALTY but because there is no contract to assert
+  them of — the company publishes no public API. Domain-standard conformance is
+  reward-only and the agentic-analytics market has no adopted interchange
+  standard, so no domain standard is claimed.
+standards:
+- id: soc2
+  name: SOC 2
+  conforms: true
+  evidence:
+    url: https://trust.shadowfax.ai/
+    status: 200
+    statement: 'Trust center Compliances table lists "SOC 2 — Compliant".'
+- id: hipaa
+  name: HIPAA
+  conforms: false
+  evidence:
+    url: https://trust.shadowfax.ai/
+    status: 200
+    statement: 'Trust center marks HIPAA "Coming soon" — announced, not attained.'
+- id: saml
+  name: SAML 2.0 / SSO
+  conforms: null
+  evidence:
+    url: https://shadowfax.ai/pricing
+    status: 200
+    statement: >-
+      "SSO/SAML" is listed as an Enterprise-tier feature on the pricing page.
+      The tier is not yet purchasable and no IdP metadata, ACS URL or
+      configuration reference is published, so conformance cannot be verified.
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  evidence:
+    url: https://shadowfax.ai/.well-known/oauth-authorization-server
+    status: 404
+    statement: >-
+      No authorization-server metadata on any host. The application authenticates
+      end users through Clerk session JWTs (observed in the 401 body at
+      app.shadowfax.ai/openapi.json), but no OAuth surface is offered to
+      third-party developers.
+- id: oidc
+  name: OpenID Connect
+  conforms: false
+  evidence:
+    url: https://shadowfax.ai/.well-known/openid-configuration
+    status: 404
+    statement: No OpenID Provider configuration document on any host.
+- id: openapi
+  name: OpenAPI
+  conforms: false
+  evidence:
+    url: https://app.shadowfax.ai/openapi.json
+    status: 401
+    statement: >-
+      An /openapi.json route exists on the application backend but is gated by a
+      Clerk session JWT. No OpenAPI document is published publicly.
+- id: rfc9457
+  name: 'RFC 9457: Problem Details for HTTP APIs'
+  conforms: false
+  evidence:
+    url: https://app.shadowfax.ai/openapi.json
+    status: 401
+    statement: >-
+      The one observable error body is a bare JSON string, not an
+      application/problem+json object.
+- id: rfc9116
+  name: 'RFC 9116: security.txt'
+  conforms: false
+  evidence:
+    url: https://shadowfax.ai/.well-known/security.txt
+    status: 404
+    statement: >-
+      No security.txt served, although the trust center does publish a security
+      contact address.
+domain_standard:
+  claimed: false
+  note: >-
+    Reward-only check. Agentic/BI analytics has no adopted machine-readable
+    interchange standard of the kind this check looks for, and Shadowfax AI
+    declares none. Recorded as not-applicable rather than as a failure.

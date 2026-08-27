@@ -1,0 +1,51 @@
+generated: '2026-08-27'
+method: searched
+source: 'registry queries: registry.npmjs.org, pypi.org — 2026-08-27'
+package_count: 0
+official_package_count: 0
+note: >-
+  Shadowfax AI publishes no first-party client libraries. Its GitHub
+  organization (github.com/shadowfax-ai, HTTP 200) has zero public
+  repositories, the docs contain no install instructions, and no registry
+  carries a package attributable to the company. NO `SDKs` POINTER IS EMITTED
+  from this file. This is consistent with the product: Shadowfax AI is an
+  end-user analytics application with no public developer API, so there is
+  nothing for an SDK to wrap.
+packages: []
+namesake_rejections:
+  note: >-
+    Recorded to stop a future round misattributing these. Both are unrelated
+    projects that merely share the "shadowfax" name, and neither belongs to
+    Shadowfax AI (Menlo Park, founded 2025).
+  rejected:
+  - registry: npm
+    name: shadowfax
+    version: 0.1.0
+    published: null
+    official: false
+    reason: >-
+      "angular login/register and general account related directive" — an
+      AngularJS directive predating the company. Not Shadowfax AI.
+  - registry: pypi
+    name: shadowfax
+    version: 0.3.0
+    published: null
+    official: false
+    reason: >-
+      Unrelated PyPI package with no summary, no homepage and no link to
+      shadowfax.ai. Not Shadowfax AI.
+searched_registries:
+- registry: npm
+  queries: [shadowfax, shadowfax-ai, '@shadowfax/sdk', '@shadowfax-ai/sdk', shadowfax-sdk]
+  first_party_hits: 0
+- registry: pypi
+  queries: [shadowfax, shadowfax-ai, shadowfax-sdk]
+  first_party_hits: 0
+evidence:
+- url: https://registry.npmjs.org/shadowfax-ai
+  status: 404
+- url: https://pypi.org/pypi/shadowfax-ai/json
+  status: 404
+- url: https://api.github.com/orgs/shadowfax-ai
+  status: 200
+  note: Organization exists but exposes zero public repositories.

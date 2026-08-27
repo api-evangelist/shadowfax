@@ -1,0 +1,114 @@
+generated: '2026-08-27'
+method: probed
+source: live HTTP probes of every Shadowfax AI host, 2026-08-27
+note: >-
+  Every /.well-known/ path probed on every Shadowfax AI host returned a miss.
+  No pointer of type WellKnown or SecurityTxt is emitted from this file: the
+  probe records an ABSENCE, and a pointer would assert the provider serves a
+  surface it does not. On app.shadowfax.ai every unmatched path is answered
+  200 with the 767-byte Vite SPA shell (title "Shadowfax AI") — that is an
+  SPA catch-all, not a document, and is recorded as a miss. On
+  trust.shadowfax.ai a default crawler User-Agent draws a CloudFront 403.
+hosts:
+- host: shadowfax.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: docs.shadowfax.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: app.shadowfax.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: SPA shell (767 bytes, text/html) — catch-all, not a document. Treated as a miss.
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: SPA shell (767 bytes, text/html) — catch-all, not a document. Treated as a miss.
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: SPA shell (767 bytes, text/html) — catch-all, not a document. Treated as a miss.
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: null
+    note: SPA shell (767 bytes, text/html) — catch-all, not a document. Treated as a miss.
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: SPA shell (767 bytes, text/html) — catch-all, not a document. Treated as a miss.
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: SPA shell (767 bytes, text/html) — catch-all, not a document. Treated as a miss.
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: SPA shell (767 bytes, text/html) — rejected per the AgentCard shape check.
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: SPA shell (767 bytes, text/html) — rejected per the AgentCard shape check.
+- host: trust.shadowfax.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    file: null
+    note: CloudFront request-blocked for a non-browser User-Agent.
+  - path: /.well-known/openid-configuration
+    status: 403
+    file: null
+    note: CloudFront request-blocked; an earlier cached 200 also returned the CloudFront error body.
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

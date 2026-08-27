@@ -1,0 +1,79 @@
+generated: '2026-08-27'
+method: searched
+source: https://shadowfax.ai/pricing
+docs: https://docs.shadowfax.ai/docs/introduction/plans-and-usage
+currency: USD
+billing_period: month
+plan_count: 3
+note: >-
+  Shadowfax AI is in free public beta. Only the Free tier is purchasable today;
+  Pro and Enterprise are both published on the pricing page but marked "Coming
+  Soon" / "Contact Us". The docs state that commercial pricing will move to a
+  token-credit consumption model when the product exits beta, and that the
+  structure is still TBD. These are product plans, not API plans — Shadowfax AI
+  publishes no public developer API, so no plan carries an API call allowance.
+plans:
+- name: Free
+  price: 0
+  currency: USD
+  billing_period: month
+  availability: available-now
+  status: public-beta
+  included:
+  - All core features
+  - Standard usage limits
+  - Basic data sources
+  - Professional support
+  - Standard rate limits
+  overage: null
+  limits:
+    note: >-
+      "Standard rate limits" is the only quota named on the pricing page; no
+      numeric limit is published there or in the docs.
+- name: Pro
+  price: 20
+  currency: USD
+  billing_period: month
+  availability: coming-soon
+  included:
+  - Everything in Free
+  - More usage
+  - Advanced data sources
+  - Priority email support
+  - Higher rate limits
+  overage: null
+  limits:
+    note: '"Higher rate limits" — no numeric limit published.'
+- name: Enterprise
+  price: null
+  price_note: Custom pricing — contact sales
+  currency: USD
+  billing_period: null
+  availability: contact-sales
+  included:
+  - Everything in Pro
+  - Custom usage limits
+  - Dedicated support
+  - Advanced security & compliance
+  - SSO/SAML
+  - Data residency regional deployment
+  overage: null
+future_pricing:
+  model: token-credit consumption
+  status: TBD
+  source: https://docs.shadowfax.ai/docs/introduction/plans-and-usage
+  consumes_tokens:
+  - AI agent conversations and View creation
+  - AI Table processing (LLM calls)
+  - Complex query planning and optimization
+  - Visualization generation
+  does_not_consume_tokens:
+  - Viewing existing Views and data
+  - Running SQL queries on Views
+  - Exporting data
+  - Collaboration features
+evidence:
+- url: https://shadowfax.ai/pricing
+  status: 200
+- url: https://docs.shadowfax.ai/docs/introduction/plans-and-usage
+  status: 200

@@ -1,0 +1,43 @@
+generated: '2026-08-27'
+method: searched
+source: https://docs.shadowfax.ai/docs/introduction/plans-and-usage
+docs: https://docs.shadowfax.ai/docs/introduction/plans-and-usage
+limit_count: 0
+note: >-
+  An honest zero. Shadowfax AI names rate limits as a plan differentiator
+  ("Standard rate limits" on Free, "Higher rate limits" on Pro) and the docs
+  devote a "Current Usage Limits" section to the subject, but NOT ONE NUMERIC
+  LIMIT IS PUBLISHED anywhere on the public surface. The docs describe the
+  limits only qualitatively — "Generous limits", "No arbitrary row limits",
+  "Fair usage limits on AI processing", "99% of users will never hit them" —
+  and state that a user who approaches a limit will be contacted. There is
+  also no public developer API, so there are no rate-limit response headers to
+  observe: the only HTTP surface is app.shadowfax.ai, which requires a Clerk
+  session JWT. Nothing here is fabricated to fill the artifact.
+limits: []
+headers:
+  observed: false
+  note: >-
+    No response headers could be observed. app.shadowfax.ai answers unauthenticated
+    requests with either a Clerk 401 or the SPA shell; no RateLimit-*, X-RateLimit-*
+    or Retry-After header is documented or reachable.
+  documented: []
+exhaustion_status_code: null
+qualitative_limits:
+- scope: file-upload
+  statement: 'Individual file uploads: "Generous limits for CSV, Excel, and Parquet files"'
+- scope: workbook-data
+  statement: 'Total data per Workbook: "Designed to handle typical analytical workloads"'
+- scope: database-connections
+  statement: '"No arbitrary row limits—query what you need"; connection limits based on fair usage'
+- scope: views-per-workbook
+  statement: Unlimited Views per Workbook
+- scope: ai-processing
+  statement: '"Fair usage limits on AI processing (LLM calls)"'
+evidence:
+- url: https://docs.shadowfax.ai/docs/introduction/plans-and-usage
+  status: 200
+- url: https://shadowfax.ai/pricing
+  status: 200
+- url: https://app.shadowfax.ai/openapi.json
+  status: 401

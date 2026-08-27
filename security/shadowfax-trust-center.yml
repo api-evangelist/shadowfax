@@ -1,0 +1,58 @@
+generated: '2026-08-27'
+method: searched
+source: https://trust.shadowfax.ai/
+url: https://trust.shadowfax.ai/
+name: Shadowfax AI Trust Center
+note: >-
+  Self-hosted trust center at trust.shadowfax.ai (HTTP 200, 429KB, browser
+  User-Agent required — a default crawler UA is answered with a CloudFront 403).
+  The page states the company was founded in 2025 and publishes a security
+  contact, a compliance list, a control inventory, a policy library and a
+  named subprocessor list. Corrected by hand after the automated probe:
+  probe-security-programs.py captured HIPAA as an achieved certification, but
+  the page marks it "Coming soon" — only SOC 2 is claimed as attained.
+certifications:
+- name: SOC 2
+  status: compliant
+  evidence: 'Compliances table: "SOC 2 — Compliant"'
+- name: HIPAA
+  status: coming-soon
+  evidence: 'Compliances table: "HIPAA — Coming soon"'
+  note: Announced, not attained. Do not count this as a held certification.
+control_families:
+- product-security
+- data-security
+- network-security
+- app-security
+- endpoint-security
+- corporate-security
+policies:
+  published: false
+  note: >-
+    A policy library is listed (System Description, Personal Data Breach
+    Notification Procedure, PHI Data Breach Notification Procedure, Physical &
+    Environmental Security, SDLC Procedure, and "+39 more") but the documents
+    themselves are behind a "Request access" gate.
+subprocessors:
+- name: PostHog
+  category: Analytics
+  region: United States of America
+- name: Cloudflare
+  category: Hosting Providers
+  region: United States of America
+- name: Anthropic
+  category: Artificial Intelligence
+  region: United States of America
+- name: GCP
+  category: IT infrastructure
+  region: United States of America
+- name: Sentry
+  category: Analytics
+  region: United States of America
+- name: OpenAI
+  category: Artificial Intelligence
+  region: United States of America
+evidence:
+- url: https://trust.shadowfax.ai/
+  status: 200
+  note: 200 with a browser User-Agent; 403 (CloudFront) with a default crawler UA.
