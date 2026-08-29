@@ -19,6 +19,17 @@ x-provenance-note: 'IDENTITY COLLISION IN THE HARVEST SEED. The backlog entry fo
   listed on the NSE as SADO. This repo profiles Shadowfax AI (shadowfax.ai, Menlo Park, agentic analytics),
   matching the recorded company name. The Hiive venue listing has been removed as the Website pointer;
   the logistics company, if wanted, belongs under a separate slug.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-08-27'
 modified: '2026-08-27'
