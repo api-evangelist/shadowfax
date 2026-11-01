@@ -64,26 +64,100 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Shadowfax AI is an AI-native, agentic analytics platform founded in 2025 and based in Menlo Park,
-California. It combines a spreadsheet, a BI tool, a visual pipeline and a code notebook into one
-analyst-in-the-loop workflow: uploaded CSV, TSV, Excel and Parquet files are held immutable as
-Sources, and every transformation produces a new View with full lineage, inspectable SQL and an
-auditable node graph. The product is in free public beta.
+Shadowfax AI is an AI-native, agentic analytics platform founded in 2025 and based in Menlo Park, California, built by veterans of Snowflake, Palantir, Rubrik and Alteryx and backed by Khosla Ventures and the Snowflake Startup Accelerator. The product combines a spreadsheet, a BI tool, a visual pipeline and a code notebook into one analyst-in-the-loop workflow: users upload CSV, TSV, Excel or Parquet sources, which are held immutable, and every transformation produces a new View with full lineage, inspectable SQL and an auditable node graph. Features include AI Tables, an AI chat interface, schema discovery, slash commands, a reactive dependency system, manual SQL mode and a Vega-based visualization framework. It is in free public beta; live database connections to Snowflake and BigQuery are announced as coming soon. Shadowfax AI publishes no public developer API — the platform is an end-user product and its only HTTP contract sits behind a Clerk-authenticated session on app.shadowfax.ai.
 
-**Shadowfax AI publishes no public developer API.** There is no developer portal, API reference,
-OpenAPI or other machine-readable contract, SDK, CLI, webhook surface or MCP server. The only HTTP
-contract on any host is an `/openapi.json` route on the application backend, which requires a
-Clerk-issued session JWT and is not published. See `x-coverage` in `apis.yml`.
+**Areas:** Company · Analytics · Business Intelligence · Artificial Intelligence · Data · Agentic Analytics · Data Engineering · Software-as-a-Service
 
-- https://shadowfax.ai/
-- https://docs.shadowfax.ai/
-- https://trust.shadowfax.ai/
-- https://status.shadowfax.ai/
+## Shadowfax AI on APIs.io
 
-### Name collision
+Everything profiled for Shadowfax AI is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/shadowfax/](https://apis.io/providers/shadowfax/)** — or go straight to one of the APIs or properties below.
 
-This profile covers **Shadowfax AI** (shadowfax.ai, Menlo Park, agentic analytics, founded 2025).
-It is **not** Shadowfax Technologies Ltd (shadowfax.in, Bengaluru third-party logistics, founded
-2015, listed on the NSE as SADO). The harvest backlog seeded this slug with a Hiive secondary-market
-URL belonging to the logistics company; that pointer has been removed. See `x-provenance-note` in
-`apis.yml`.
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Shadowfax Domain Security](https://apis.io/security/shadowfax/shadowfax-domain-security/)
+- [Shadowfax Trust Center](https://apis.io/security/shadowfax/shadowfax-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Shadowfax Plans Pricing](https://apis.io/plans/shadowfax/shadowfax-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Shadowfax Rate Limits](https://apis.io/rate-limits/shadowfax/shadowfax-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://shadowfax.ai/)
+- [Documentation](https://docs.shadowfax.ai/)
+- [Getting started](https://docs.shadowfax.ai/docs/introduction/getting-started)
+- [Pricing](https://shadowfax.ai/pricing)
+- [Sign up](https://shadowfax.ai/sign-up)
+- [Blog](https://shadowfax.ai/blog)
+- [Terms of service](https://shadowfax.ai/terms)
+- [Privacy policy](https://shadowfax.ai/privacy)
+- [Status](https://status.shadowfax.ai/)
+
+## API Evangelist rating
+
+**Kin Score 32.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 92.1 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 21.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/shadowfax/](https://apis.io/providers/shadowfax/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Shadowfax AI: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/shadowfax/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
